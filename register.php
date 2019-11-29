@@ -13,7 +13,7 @@
 		$query = "SELECT username FROM customers"."WHERE username = $_POST['username'];"
 		$result = mysqli_query($con, &query);
 		if (mysqli_num_rows($result)) 
-		{ ?>
+		{ 
 		<p> The Username <?php echo $_POST['username']; ?> is already in use, so choose another one! </p>
 		<p>
 		<form action ="register.php" method="post">
