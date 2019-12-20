@@ -52,7 +52,7 @@
 		<p> Username: <input type="text" name="username" required></p>
 		<p> Password: <input type="password" name="password" required></p>
 		<p> Email:    <input type="email" name="email" required></p>
-		<p> First name:<input type="text" name="first_name"></p>				
+		<p> First name:<input type="text" name="first_name" required></p>					
 		<p> Last name:<input type="text" name="last_name" required></p>
 		<p> Address line 1:<input type="text" name="add1" required></p>
 		<p> Address line 2:<input type="text" name="add2" required></p>
