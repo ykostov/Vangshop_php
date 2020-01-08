@@ -1,13 +1,26 @@
 <?php
 	session_start();
+	include "conn.php";
 	$_SESSION["user_logged"] = 0;
-	if (isset($_POST["submit"]) && $_POST["username"]=="admin"
-	    && $_POST["password"]=="1234")
+	if (isset($_POST["submit"]))
 	{
-		$_SESSION["user_logged"] = 1;	
-		header("Refresh: 2; URL=index.php");
-		echo "You are  being redirected to the home page";
-		die();
+		$query = "SELECT username , password".
+				 "FROM customers WHERE ".
+				 "username = ".$_POST['username']." AND ".
+				 "password = 'PASSWORD".($_POST['password'])"";
+				
+				$result = mysqli_query($con, $query);
+				if (mysqli_num_rows($result)==1)
+				{
+				$_SESSION['user_logged']=1;
+				$_SESSION['username']=$_POST['username'];
+				header("Refresh: 2; URL=index.php");
+				echo "You are being redirected to the home page";
+				}
+			else
+				{
+					echo "Invalid username or password";        // Do tuka stignahme //
+					
 	}
 	if (isset($_POST["submit"]))
 	{
