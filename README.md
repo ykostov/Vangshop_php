@@ -1,3 +1,4 @@
 # Online_shop
-Online shop on PHP... In developing...
-by Yasen Kostov
+Online shop on PHP
+In developing...
+
