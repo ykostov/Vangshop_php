@@ -1,0 +1,29 @@
+Tables(both customers and admins): username	password	first_name	last_name	email	admin_level	id
+
+// adding admin 1 //
+
+INSERT INTO admin (
+    username, password, first_name, last_name, email, admin_level, id)
+VALUES (
+    'admin1', PASSWORD('2345'), 'John', 'Reese', 'jr@gmail.com', '1', '' );
+
+// creating table 'customers' //
+
+CREATE TABLE customers (
+    id int(6) NOT NULL AUTO_INCREMENT,
+    username varchar(50) NOT NULL,
+    password varchar(255) NOT NULL,
+    first_name varchar(20) NOT NULL,
+    last_name varchar(20) NOT NULL,
+    add1 varchar(50) NOT NULL,
+    add2 varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+// adding customer 1 //
+
+INSERT INTO customers (
+    id, username, password, first_name, last_name, add1, add2, email )
+VALUES (
+    '', 'customer1', PASSWORD('123'), 'James', 'Bond', 'Bulgaria', 'Burgas' 'jamesbond@gmail.com');
